@@ -8,7 +8,7 @@ class Teststack(unittest.TestCase):
     def test_node(self):
         first = Node(5, None)
         self.assertEqual(first.data, 5)
-        self.assertEqual(first.next_node, None)
+        self.assertEqual(first.back_node, None)
 
     def test_stack(self):
         second = Stack()
@@ -17,3 +17,4 @@ class Teststack(unittest.TestCase):
         self.assertEqual(isinstance(second.top, Node), True)
         self.assertEqual(second.pop(), 'data1')
         self.assertEqual(second.pop(), None)
+        self.assertEqual(str(second), 'None')
